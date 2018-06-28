@@ -1,0 +1,24 @@
+1,trước tiên, chúng ta sẽ xem xét loại bộ nạp tự động nào Magento đã đăng ký. Chúng ta có thể sử dụng hàm spl_autoload_functions của PHP để trả về một mảng các callback lại PHP đã đăng ký. Nếu bạn không quen thuộc với họ, callbacks, (hoặc callables), là một kiểu PHP đặc biệt mà trước ngày PHP có các hàm ẩn danh lớp đầu tiên.
+Các tệp này được tạo bất cứ khi nào bạn chạy lệnh cài đặt, cập nhật hoặc dumpautoload của composer . Hầu hết (tất cả?) Mô đun lõi Magento đăng ký trình nạp tự động PSR-4, có nghĩa là bạn sẽ tìm thấy thông tin tự động tải về được lưu trong bộ nhớ cache trong vendor / composer / autoload_psr4.php.
+2, Cách nó hoạt động cơ bản là thông qua việc sử dụng  Varien_Object class Bên trong lớp này nó sử dụng các phương thức __call() , __getter() , __setter()... 
+Các magic method được kích hoạt từ tệp tin : class Varien_Object đượt đặt trong  lib / Varien / Object.php
+Nó thiết lập và nhận biết các biến đổi của giá trị của object trong magento.
+3,
+Được lưu trong thư mục  var/report và var/log/exception.log
+4,
+Khi bạn ghé thăm một website có thiết lập Cookie, các câu lệnh bên trong trang web này cho phép trình duyệt của bạn liên hệ với server của site. Server này gửi thông tin ngược lại cho trình duyệt và thông tin đó được lưu vào  bộ nhớ  của bạn. Các trình duyệt khác nhau sẽ lưu Cookie ở những nơi khác nhau. Netscape Navigator duy trì một tập tin có tên Cookie.txt chứa tất cả những Cookie từ bất cứ site nào có tạo ra Cookie. Trên một máy tính cá nhân chạy Windows, Internet Explorer lưu các Cookie của nó trong thư mục C:\windows\ Cookies. Khi bạn quay trở lại site, server của site hỏi trình duyệt của bạn để tìm Cookie mà trước kia nó đã tạo và trình duyệt đáp lại bằng cách gửi thông tin của Cookie cho server
+	Session khi sinh ra được lưu trên 1 file có tên dài dòng và được lưu trên server , khó đoán và được tạo ngẫu nhiên là session id trên máy chủ, và đồng thời ở máy client cũng có 1 cookie sinh ra có nội dung (hay giá trị) đúng như session id (để có thể so khớp session nào là của client nào) đối với mỗi ngôn ngữ lập trình web sẽ có tên cookie quy định như php là PHPSESSID 
+5,- Namespace được sử dụng để định danh 1 lớp một cách cụ thể hóa
+Nhận thấy sự bất cập này, PHP đã bổ sung chức năng namespace để tạo định danh cho các lớp 1 cách rõ ràng hơn. Ví dụ lớp ABC của chúng ta thuộc namespace home và lớp ABC bên file khác thuộc định danh other. Khi đó, việc sử dụng và tương tác giữa chúng hoàn toàn có thể kiểm soát 1 cách dễ dàng.
+ -Require/include : dùng để import một file php vào trong một file php khác  
+Khi sử dụng namespace ta có thể import những file có tên giống nhau mà không hề xảy ra xung đột 
+6, 
+
+7,
+-method debug in PHP: die(), echo, var_dump();
+
+-file log in my local setup is /var/log/apache2/error.log
+
+- có 16 mức level PHP errors: 
+8,
+Chạy từng dòng code , và dùng breakpoint để theo dõi từng dòng code mà ta ấn định
